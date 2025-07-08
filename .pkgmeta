@@ -1,0 +1,10 @@
+package-as: ElvUI_RoninUI
+manual-changelog:
+    filename: CHANGELOG.md
+    markup-type: markdown
+move-folders:
+    ElvUI_RoninUI/ElvUI_RoninUI: ElvUI_RoninUI
+enable-toc-creation: yes
+enable-nolib-creation: no
+ignore:
+    - Images

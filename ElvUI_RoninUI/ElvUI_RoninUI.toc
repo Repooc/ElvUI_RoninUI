@@ -1,0 +1,18 @@
+## Interface: 110107, 40402, 11507
+## Title: |cff1784D1ElvUI|r |cffFFFFFFRonin|r|cff5CE1E6UI|r
+## Author: Ronin, Repooc
+## Version: 1.0
+## Notes: An |cff1784d1ElvUI|r Profile Installer that was put together by Repooc that allows you to setup your |cffFFFFFFRonin|r|cff5CE1E6UI|r profiles with minimal effort.
+## RequiredDeps: ElvUI
+## OptionalDeps: AddOnSkins, BigWigs, Details, Plater, MRT, OmniBar, OmniCD, WeakAuras
+## DefaultState: Enabled
+## IconTexture: Interface\AddOns\ElvUI_RoninUI\Media\Logo256
+## SavedVariablesPerCharacter: RoninUICharDB
+## X-Curse-Project-ID:
+## X-Wago-ID:
+
+Libs\Load_Libs.xml
+Init.lua
+Config.lua
+AddOns\Load_AddOns.xml
+Core\Load_Core.xml
