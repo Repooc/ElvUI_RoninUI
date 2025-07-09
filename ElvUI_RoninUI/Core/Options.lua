@@ -61,7 +61,7 @@ local function SetCurrentProfileHeader(addon, profileID)
 	local curProfile, disabledText = '', '|cffff3300AddOn Disabled|r'
 	if addon == 'Blizzard' then
 		curProfile = GetBlizzardProfile() or disabledText
-	elseif addon == 'ElvUI' and profileID == 'Profile1' then
+	elseif addon == 'ElvUI' and (profileID == 'Profile1' or profileID == 'Profile2') then
 		curProfile =  E.data:GetCurrentProfile()
 	elseif addon == 'ElvUI' and profileID == 'Private1' then
 		curProfile =  E.charSettings:GetCurrentProfile()
@@ -228,9 +228,10 @@ local function configTable()
 	ElvUI.args.Global1Button = ACH:Execute(Engine.ProfileData.ElvUI.Global1ButtonText, 'This will import the ElvUI global profile.', 6, function() SetupProfileButton('ElvUI', 'Global1') end, nil, nil, 'full')
 	ElvUI.args.spacer1 = ACH:Spacer(7, 'full')
 	ElvUI.args.generalHeader = ACH:Header('General Profile', 10)
-	ElvUI.args.General1Header = ACH:Header(SetCurrentProfileHeader('ElvUI', 'Profile1'), 11)
-	ElvUI.args.General1Button = ACH:Execute(Engine.ProfileData.ElvUI.Profile1ButtonText, 'This will import the ElvUI general profile.', 12, function() SetupProfileButton('ElvUI', 'Profile1') end, nil, nil, 'full')
-	ElvUI.args.spacer2 = ACH:Spacer(13, 'full')
+	ElvUI.args.GeneralProfile1Header = ACH:Header(SetCurrentProfileHeader('ElvUI', 'Profile1'), 11)
+	ElvUI.args.GeneralProfile1Button = ACH:Execute(Engine.ProfileData.ElvUI.Profile1ButtonText, 'This will import the ElvUI general profile.', 12, function() SetupProfileButton('ElvUI', 'Profile1') end, nil, nil, 'full')
+	ElvUI.args.GeneralProfile2Button = ACH:Execute(Engine.ProfileData.ElvUI.Profile2ButtonText, 'This will import the ElvUI general profile.', 14, function() SetupProfileButton('ElvUI', 'Profile2') end, nil, nil, 'full')
+	ElvUI.args.spacer2 = ACH:Spacer(15, 'full')
 	ElvUI.args.privateHeader = ACH:Header('Private Profile', 20)
 	ElvUI.args.Private1Header = ACH:Header(SetCurrentProfileHeader('ElvUI', 'Private1'), 21)
 	ElvUI.args.Private1Button = ACH:Execute(Engine.ProfileData.ElvUI.Private1ButtonText, 'This will import the ElvUI private profile.', 22, function() SetupProfileButton('ElvUI', 'Private1') end, nil, nil, 'full')
