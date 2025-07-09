@@ -1,7 +1,7 @@
 local AddOnName, Engine = ...
 local E = unpack(ElvUI)
 
-Engine.Config.MinElvUI = 13.89 --* Minimum version of ElvUI this profile should support
+Engine.Config.MinElvUI = 13.93 --* Minimum version of ElvUI this profile should support
 Engine.Config.Logo = [[Interface\AddOns\ElvUI_RoninUI\Media\Logo512]] --* Logo image that is shown in the installer
 Engine.Config.Discord = 'https://discord.gg/w26nxJS3ND' --* Link to your Discord server
 Engine.Config.Installer = {
