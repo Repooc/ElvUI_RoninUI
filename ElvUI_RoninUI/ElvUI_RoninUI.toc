@@ -8,8 +8,8 @@
 ## DefaultState: Enabled
 ## IconTexture: Interface\AddOns\ElvUI_RoninUI\Media\Logo256
 ## SavedVariablesPerCharacter: RoninUICharDB
-## X-Curse-Project-ID:
-## X-Wago-ID:
+## X-Curse-Project-ID: 1303564
+## X-Wago-ID: L6JDlxGv
 
 Libs\Load_Libs.xml
 Init.lua
