@@ -212,9 +212,9 @@ Engine.InstallerData = {
 
 			_G.PluginInstallFrame.SubTitle:SetFormattedText('|cffFFD900%s|r', L["Welcome"])
 
-			_G.PluginInstallFrame.Desc1:SetFormattedText('|cff4BEB2C%s|r', format('The %s installer will guide you through some steps and apply all the profile settings needed for the layout.', config.Title))
-			_G.PluginInstallFrame.Desc2:SetFormattedText('|cffFFFF00%s|r', format('%s layouts were made on a 1440p monitor using 0.56 UI Scale in ElvUI\'s options. If using another resolution/scale, you may need to adjust some frames size/location to ensure optimal placement for your setup.', config.Title))
-			_G.PluginInstallFrame.Desc3:SetFormattedText('|cffFF3300%s|r', "Please read the steps carefully before clicking any buttons!")
+			_G.PluginInstallFrame.Desc1:SetFormattedText('|cff4BEB2C%s|r', format('The %s installer will guide you through some steps and apply all the profile settings needed for each layout.', config.Title))
+			_G.PluginInstallFrame.Desc2:SetFormattedText('|cffFFFF00%s|r', format('%s layouts were made on a 1440p monitor using 0.56 UI Scale in ElvUI\'s options. If using another resolution or scale, you may need to adjust frame sizes & locations to ensure optimal placement for your setup.', config.Title))
+			_G.PluginInstallFrame.Desc3:SetFormattedText('|cffFF3300%s|r', "Please read each step carefully before clicking any buttons!")
 
 			_G.RoninUICharDB.skipStep = _G.RoninUICharDB.skipStep or {}
 			if RoninUICharDB.skipStep.ElvUI then
@@ -236,8 +236,8 @@ Engine.InstallerData = {
 			_G.PluginInstallFrame.SubTitle:SetText(format('%sGlobal Profile (%s)|r', '|cffFFD900', E.title))
 
 			_G.PluginInstallFrame.Desc1:SetText(format('|cff4BEB2C%s', 'This page will set up the global profile for ElvUI. The options in this profile will be shared across all characters on your account.'))
-			_G.PluginInstallFrame.Desc2:SetText(format('|cffFF3300Warning: |r%s', '|cffFFD900Be warned that this will overwrite your current global profile settings. There is no "undo" button, backup your WTF folder before proceeding.|r'))
-			_G.PluginInstallFrame.Desc3:SetText('|cffFF3300Reminder: |r|cffFFD900This only needs to be done once per account. This is not reversable.|r')
+			_G.PluginInstallFrame.Desc2:SetText(format('|cffFF3300Warning: |r%s', '|cffFFD900This will overwrite your current global profile settings. There is no "undo" button for this step, please backup your WTF folder before proceeding.|r'))
+			_G.PluginInstallFrame.Desc3:SetText('|cffFF3300Reminder: |r|cffFFD900This step only needs to be done once per account and is irreversable.|r')
 
 			_G.PluginInstallFrame.Option1:SetEnabled(true)
 			_G.PluginInstallFrame.Option1:SetScript('OnClick', function() SetupProfileButton('ElvUI', 'Global1') end)
@@ -252,7 +252,7 @@ Engine.InstallerData = {
 			_G.PluginInstallFrame.SubTitle:SetText(format('|cffFFD900%s|r', format('General Profile (%s)', E.title)))
 
 			_G.PluginInstallFrame.Desc1:SetText(ElvUIProfileDescText())
-			_G.PluginInstallFrame.Desc2:SetText('|cff4BEB2CThis page will import the profile you clicked into ElvUI and make it the active profile. If the profile you click exists in the list of profiles in ElvUI, it will let you decide to overwrite or change the name of the selected profile.|r')
+			_G.PluginInstallFrame.Desc2:SetText('|cff4BEB2CThis page will import the ElvUI profile you select and make it the active profile. If the profile you select already exists, it will allow you to overwrite or change the name of the selected profile.|r')
 
 			_G.PluginInstallFrame.Option1:SetEnabled(true)
 			_G.PluginInstallFrame.Option1:SetScript('OnClick', function() SetupProfileButton('ElvUI', 'Profile1') PluginInstallFrame.Desc1:SetText(ElvUIProfileDescText()) end)
@@ -349,7 +349,7 @@ Engine.InstallerData = {
 			resizeInstaller()
 			resetButtonScripts()
 
-			_G.PluginInstallFrame.SubTitle:SetText('|cffFFD900OmniBar|r')
+			_G.PluginInstallFrame.SubTitle:SetText('|cffFFD900OmniBar (PvP Only)|r')
 
 			OmniBarDesc1Text()
 			_G.PluginInstallFrame.Desc2:SetFormattedText('|cffFFD900%s|r', format('This page will setup the OmniBar profile for %s', config.Title))
@@ -409,8 +409,8 @@ Engine.InstallerData = {
 
 			_G.PluginInstallFrame.SubTitle:SetText('|cffFFD900WeakAuras|r')
 
-			_G.PluginInstallFrame.Desc1:SetFormattedText('|cffFFD900%s|r', 'This step will let you import my |cff4beb2cEssentials|r and class |cffFFFF00WeakAuras|r that I use for the layout.')
-			_G.PluginInstallFrame.Desc2:SetText('|cffFFFF00Note:|r The Essentials pack only needs to be installed once per account.\nThe class packs for the rest of the classes can be imported for the rest \nof the classes from our section in the ElvUI options window.')
+			_G.PluginInstallFrame.Desc1:SetFormattedText('|cffFFD900%s|r', 'This step will let you import my |cff2a84cbEssentials|r and class |cffFFFFFFWeakAuras|r that I use for the layout.')
+			_G.PluginInstallFrame.Desc2:SetText('|cffFFFF00Note:|r The Essentials pack only needs to be installed once per account.\nEach class pack can be imported from this page when on \nthat specific class or from the ElvUI options window.')
 
 			_G.PluginInstallFrame.Option1:SetEnabled(E:IsAddOnEnabled('WeakAuras'))
 			_G.PluginInstallFrame.Option1:SetScript('OnClick', function() SetupProfileButton('WeakAuras', 'Profile1', WeakAuraButtonText) end)
@@ -428,8 +428,9 @@ Engine.InstallerData = {
 
 			_G.PluginInstallFrame.SubTitle:SetFormattedText('|cffFFD900%s|r', L["Installation Complete"])
 
-			_G.PluginInstallFrame.Desc1:SetFormattedText('|cffFFD900%s|r', 'You have completed the installation process, please click "Finished" to reload the UI.')
-			_G.PluginInstallFrame.Desc2:SetFormattedText('|cffFFD900%s|r', 'Feel free to join our community Discord for support and feedback.')
+			_G.PluginInstallFrame.Desc1:SetFormattedText('|cffFFD900%s|r', 'You have completed the installation process, please click "|cff4beb2cFinished|r" to reload the UI.')
+			_G.PluginInstallFrame.Desc2:SetFormattedText('|cffFFD900%s|r', 'Special thanks to HiJack (Spell WeakAuras), Quazii (Plater Mods), \n Repooc (Installer Creation), and the TukUI Community.')
+			_G.PluginInstallFrame.Desc3:SetFormattedText('|cffFFD900%s|r', 'Feel free to join my community Discord for support, questions, or feedback. Also follow me on Twitch "RoninXCVII"')
 
 			_G.PluginInstallFrame.Option1:SetEnabled(true)
 			_G.PluginInstallFrame.Option1:SetScript('OnClick', function() E:StaticPopup_Show('RONINUI_EDITBOX', nil, nil, config.Discord) end)
