@@ -360,6 +360,13 @@ Engine.InstallerData = {
 			_G.PluginInstallFrame.Option1:SetScript('onLeave', function() SetupOptionScripts('onLeave') end)
 			_G.PluginInstallFrame.Option1:SetText(Engine.ProfileData.OmniBar.Profile1ButtonText)
 			_G.PluginInstallFrame.Option1:Show()
+
+			_G.PluginInstallFrame.Option2:SetEnabled(E:IsAddOnEnabled('OmniBar'))
+			_G.PluginInstallFrame.Option2:SetScript('OnClick', function() SetupProfileButton('OmniBar', 'Profile2', OmniBarDesc1Text) end)
+			_G.PluginInstallFrame.Option2:SetScript('onEnter', function() SetupOptionScripts('onEnter', Engine.ProfileData.OmniBar.Profile2Preview) end)
+			_G.PluginInstallFrame.Option2:SetScript('onLeave', function() SetupOptionScripts('onLeave') end)
+			_G.PluginInstallFrame.Option2:SetText(Engine.ProfileData.OmniBar.Profile2ButtonText)
+			_G.PluginInstallFrame.Option2:Show()
 		end,
 		[9] = function()
 			--* OmniCD

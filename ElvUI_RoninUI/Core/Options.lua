@@ -246,6 +246,7 @@ local function configTable()
 	OmniBar.args.Profile1Header = ACH:Header(SetCurrentProfileHeader('OmniBar', 'Profile1'), 2)
 	OmniBar.args.spacer1 = ACH:Spacer(3, 'full')
 	OmniBar.args.Profile1Button = ACH:Execute(Engine.ProfileData.OmniBar.Profile1ButtonText, 'This will import the OmniBar profile.', 10, function() SetupProfileButton('OmniBar', 'Profile1') end, nil, nil, 'full', nil, nil, function(info) return not E:IsAddOnEnabled(info[#info-1]) end)
+	OmniBar.args.Profile2Button = ACH:Execute(Engine.ProfileData.OmniBar.Profile2ButtonText, 'This will import the OmniBar profile.', 10, function() SetupProfileButton('OmniBar', 'Profile2') end, nil, nil, 'full', nil, nil, function(info) return not E:IsAddOnEnabled(info[#info-1]) end)
 
 	--* OmniCD
 	local OmniCD = Steps.args.OmniCD
