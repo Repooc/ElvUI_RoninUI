@@ -1,3 +1,3 @@
-v1.1 7/9/2025
+v1.2 7/11/2025
 
-• Some update work
+• Fixed Details import and options.
