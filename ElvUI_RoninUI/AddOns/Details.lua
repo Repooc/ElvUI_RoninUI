@@ -17,8 +17,7 @@ end
 
 local function SetImportedProfile(dataKey, dataProfile, force, callback, profileID)
 	if not hasProfile(dataKey) or force then
-		local imported = Details:ImportProfile(dataProfile, dataKey, true, nil, force)
-		Engine:Print(format('Importing details: %s', imported and 'true' or 'false'))
+		Details:ImportProfile(dataProfile, dataKey, true, nil, force)
 		if callback and type(callback) == 'function' then callback('Details', profileID) end
 	else
 		E.PopupDialogs.RONINUI_PROFILE_EXISTS = {
