@@ -303,7 +303,7 @@ Engine.InstallerData = {
 			_G.PluginInstallFrame.Option1:Show()
 
 			_G.PluginInstallFrame.Option2:SetEnabled(E:IsAddOnEnabled('Details') and not RoninUICharDB.isDualEmbedEnabled)
-			_G.PluginInstallFrame.Option2:SetScript('OnClick', function() if E:IsAddOnEnabled('Details') then RoninUICharDB.skipStep.ElvUI = true RoninUICharDB.isDualEmbedEnabled = true AS:SetOption('EmbedSystem', false) AS:SetOption('EmbedSystemDual', true) C_UI.Reload() end end)
+			_G.PluginInstallFrame.Option2:SetScript('OnClick', function() if E:IsAddOnEnabled('Details') then RoninUICharDB.skipStep.ElvUI = true RoninUICharDB.isDualEmbedEnabled = true AS:SetOption('EmbedSystem', false) AS:SetOption('EmbedSystemDual', true) AS:SetOption('EmbedLeftWidth', 225) C_UI.Reload() end end)
 			_G.PluginInstallFrame.Option2:SetScript('onEnter', nil)
 			_G.PluginInstallFrame.Option2:SetScript('onLeave', function() SetupOptionScripts('onLeave') end)
 			_G.PluginInstallFrame.Option2:SetShown(not RoninUICharDB.isDualEmbedEnabled)
