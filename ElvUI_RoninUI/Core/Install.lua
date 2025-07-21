@@ -89,7 +89,7 @@ local function WeakAuraButtonText(profileID)
 end
 
 local function WeakAuraClassButtonText()
-	local color = E:ClassColor(E.myclass, true)
+	local color = E:ClassColor(E.myclass)
 	local prettyText = color:WrapTextInColorCode(E.myLocalizedClass)
 	local profileString = Engine.ProfileData.WeakAuras.CLASS[E.myclass]
 	local doesExist = Engine.WeakAuras:doesAuraExist(profileString)
