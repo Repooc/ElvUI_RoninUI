@@ -60,7 +60,6 @@ local function GetOptions()
 end
 
 local addonList = {
-	AddonSkins = true,
 	BigWigs = true,
 	BigWigs_Core = true,
 	BigWigs_KhazAlgar = true,
@@ -110,8 +109,6 @@ local function chatCmdHandler(msg)
 end
 
 local function Initialize()
-	RoninUICharDB.isDualEmbedEnabled = Engine.AddonSkins:isDualEmbedEnabled()
-
 	if not RoninUICharDB.install_complete then
 		PI:Queue(Engine.InstallerData)
 	end
