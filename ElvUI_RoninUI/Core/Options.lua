@@ -14,6 +14,7 @@ sort(config.Credits, SortList)
 local CREDITS_STRING = tconcat(config.Credits, '|n')
 local hexElvUIBlue = '|cff1785d1'
 
+local CLASS_SORT_ORDER = _G.CLASS_SORT_ORDER
 local sortedClasses = E:CopyTable({}, CLASS_SORT_ORDER)
 sort(sortedClasses)
 
