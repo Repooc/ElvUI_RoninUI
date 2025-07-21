@@ -3,8 +3,6 @@ local E, L = unpack(ElvUI)
 local D = E.Distributor
 local PI = E.PluginInstaller
 
-local AS = E:IsAddOnEnabled('AddOnSkins') and unpack(AddOnSkins)
-
 local config = Engine.Config
 local hexElvUIBlue = '|cff1785d1'
 
@@ -43,11 +41,7 @@ local function DetailsDesc2Text()
 end
 
 local function DetailsDesc3Text()
-	if E:IsAddOnEnabled('Details') then
-		return not Engine.AddonSkins:isDualEmbedEnabled() and format('%sAddOnSkins|r has been detected and but an option that is required needs to be enabled before importing the %sDetails|r profile.|nClick the %s\"|r%sFix Confict|r%s\"|r button to fix that option and reload the ui to continue importing the %sDetails|r profile.', hexElvUIBlue, hexElvUIBlue, hexElvUIBlue, '|cffFFD900', hexElvUIBlue, hexElvUIBlue) or ''
-	else
-		return '|cffFF3333WARNING:|r Details! is not enabled to configure.'
-	end
+	return E:IsAddOnEnabled('Details') and '|cffFF3333WARNING:|r Details! is not enabled to configure.' or ''
 end
 
 local function ElvUIProfileDescText()
@@ -295,19 +289,12 @@ Engine.InstallerData = {
 			_G.PluginInstallFrame.Desc2:SetText(DetailsDesc2Text())
 			_G.PluginInstallFrame.Desc3:SetText(DetailsDesc3Text())
 
-			_G.PluginInstallFrame.Option1:SetEnabled(E:IsAddOnEnabled('Details') and RoninUICharDB.isDualEmbedEnabled)
+			_G.PluginInstallFrame.Option1:SetEnabled(E:IsAddOnEnabled('Details'))
 			_G.PluginInstallFrame.Option1:SetScript('OnClick', function() SetupProfileButton('Details', 'Profile1', DetailsDesc1Text) end)
 			_G.PluginInstallFrame.Option1:SetScript('onEnter', function() SetupOptionScripts('onEnter', Engine.ProfileData.Details.Profile1Preview) end)
 			_G.PluginInstallFrame.Option1:SetScript('onLeave', function() SetupOptionScripts('onLeave') end)
 			_G.PluginInstallFrame.Option1:SetText(Engine.ProfileData.Details.Profile1ButtonText)
 			_G.PluginInstallFrame.Option1:Show()
-
-			_G.PluginInstallFrame.Option2:SetEnabled(E:IsAddOnEnabled('Details') and not RoninUICharDB.isDualEmbedEnabled)
-			_G.PluginInstallFrame.Option2:SetScript('OnClick', function() if E:IsAddOnEnabled('Details') then RoninUICharDB.skipStep.ElvUI = true RoninUICharDB.isDualEmbedEnabled = true AS:SetOption('EmbedSystem', false) AS:SetOption('EmbedSystemDual', true) AS:SetOption('EmbedLeftWidth', 225) C_UI.Reload() end end)
-			_G.PluginInstallFrame.Option2:SetScript('onEnter', nil)
-			_G.PluginInstallFrame.Option2:SetScript('onLeave', function() SetupOptionScripts('onLeave') end)
-			_G.PluginInstallFrame.Option2:SetShown(not RoninUICharDB.isDualEmbedEnabled)
-			_G.PluginInstallFrame.Option2:SetText('Fix Conflict')
 		end,
 		[6] = function()
 			--* BigWigs

@@ -222,8 +222,7 @@ local function configTable()
 	local Details = Steps.args.Details
 	Details.args.Profile1Header = ACH:Header(SetCurrentProfileHeader('Details', 'Profile1'), 2)
 	Details.args.spacer1 = ACH:Spacer(3, 'full')
-	Details.args.Profile1Button = ACH:Execute(Engine.ProfileData.Details.Profile1ButtonText, 'This will import the Details profile.', 4, function() SetupProfileButton('Details', 'Profile1', UpdateCurrentProfileHeder) end, nil, nil, 'full', nil, nil, function() return not (E:IsAddOnEnabled('Details') and RoninUICharDB.isDualEmbedEnabled) end)
-	Details.args.Profile2Button = ACH:Execute('Fix Conflict', 'This will fix the conflict that we have with AddOnSkins options to use with Details.', 5, function() if E:IsAddOnEnabled('Details') then RoninUICharDB.isDualEmbedEnabled = true AS:SetOption('EmbedSystem', false) AS:SetOption('EmbedSystemDual', true) AS:SetOption('EmbedLeftWidth', 225) C_UI.Reload() end end, nil, nil, 'full', nil, nil, function() return not (E:IsAddOnEnabled('Details') and not RoninUICharDB.isDualEmbedEnabled) end, function() return RoninUICharDB.isDualEmbedEnabled end)
+	Details.args.Profile1Button = ACH:Execute(Engine.ProfileData.Details.Profile1ButtonText, 'This will import the Details profile.', 4, function() SetupProfileButton('Details', 'Profile1', UpdateCurrentProfileHeder) end, nil, nil, 'full', nil, nil, function() return not E:IsAddOnEnabled('Details') end)
 
 	--* ElvUI Global Profile
 	local ElvUI = Steps.args.ElvUI

@@ -4,7 +4,7 @@
 ## Version: 1.3
 ## Notes: An |cff1784d1ElvUI|r Profile Installer that was put together by Repooc that allows you to setup your |cffFFFFFFRonin|r|cff5CE1E6UI|r profiles with minimal effort.
 ## RequiredDeps: ElvUI
-## OptionalDeps: AddOnSkins, BigWigs, Details, Plater, MRT, OmniBar, OmniCD, WeakAuras
+## OptionalDeps: BigWigs, Details, Plater, MRT, OmniBar, OmniCD, WeakAuras
 ## DefaultState: Enabled
 ## IconTexture: Interface\AddOns\ElvUI_RoninUI\Media\Logo256
 ## SavedVariablesPerCharacter: RoninUICharDB
