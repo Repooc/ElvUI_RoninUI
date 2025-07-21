@@ -2,7 +2,6 @@ local E, L, V, P, G = unpack(ElvUI)
 local ACH = E.Libs.ACH
 local PI = E.PluginInstaller
 local AddOnName, Engine = ...
-local AS = E:IsAddOnEnabled('AddOnSkins') and unpack(AddOnSkins)
 
 local tconcat, sort = table.concat, sort
 local config = Engine.Config
