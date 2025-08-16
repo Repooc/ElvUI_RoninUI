@@ -1,3 +1,3 @@
-v1.3 7/17/2025
+v1.4 8/16/2025
 
-• Minor bug fixes. Updated Details profile. Updated ElvUI profiles (Tank & DPS, Healer, Global, and Private). Updated "Essentials" WeakAura pack.
+• Updated Class & Essentials WeakAura's. Updated ElvUI profiles (Tank & DPS & Healer). Updated Plater.
