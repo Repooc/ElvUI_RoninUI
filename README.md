@@ -15,7 +15,7 @@ RoninUI was initially designed for a 2560x1440 screen resolution. If you’re pl
 ## Important
 **To achieve the same login screen you'll have to do one of two things:**
 - Follow the directions at this [link](https://www.wowinterface.com/downloads/info25941-ElvUILoginScreenandCharacterSelectGlues.html)
-- Join my [Discord](https://discord.gg/w26nxJS3ND) and follow the steps in *#ronin-ui* after selecting the WoW emoji in *rules-and-roles*
+- Join my [Discord](https://discord.gg/w26nxJS3ND) and follow the steps in *#ronin-ui* after selecting the WoW emoji in *#roles*
 
 ## Required AddOns
 - [ElvUI](https://tukui.org/elvui)
